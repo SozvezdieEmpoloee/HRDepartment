@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_vacancies"
+        android:title="Vacancies"
+        android:icon="@drawable/ic_work" />
+    <item
+        android:id="@+id/nav_employees"
+        android:title="Employees"
+        android:icon="@drawable/ic_people" />
+    <item
+        android:id="@+id/nav_profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_profile" />
+</menu>

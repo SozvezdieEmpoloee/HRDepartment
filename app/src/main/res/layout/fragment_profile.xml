@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Фон (полупрозрачная картинка) -->
+    <ImageView
+        android:id="@+id/profile_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/app_background_foreground"
+        android:alpha="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Фото пользователя -->
+    <ImageView
+        android:id="@+id/profile_photo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="User Photo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_person_placeholder"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Кнопка для смены фотографии (иконка камеры) -->
+    <ImageView
+        android:id="@+id/btn_change_photo"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:contentDescription="Change photo"
+        android:src="@drawable/ic_camera"
+        app:layout_constraintBottom_toBottomOf="@id/profile_photo"
+        app:layout_constraintEnd_toEndOf="@id/profile_photo"
+        android:layout_margin="4dp" />
+
+    <!-- Контейнер с текстовой информацией (имя, телефон, email) -->
+    <LinearLayout
+        android:id="@+id/ll_profile_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@id/profile_photo"
+        app:layout_constraintTop_toTopOf="@id/profile_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_min="0dp" >
+
+        <!-- Имя -->
+        <TextView
+            android:id="@+id/tv_profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+        <!-- Телефон -->
+        <TextView
+            android:id="@+id/tv_profile_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black" />
+
+        <!-- Email -->
+        <TextView
+            android:id="@+id/tv_profile_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <!-- Кнопка "Сменить пароль" -->
+    <Button
+        android:id="@+id/btn_change_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Change Password"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/teal_200"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_delete_account" />
+
+    <!-- Кнопка "Удалить аккаунт" -->
+    <Button
+        android:id="@+id/btn_delete_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Delete Account"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/red"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_logout" />
+
+    <!-- Кнопка "Log Out" -->
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Log Out"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/teal_200"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

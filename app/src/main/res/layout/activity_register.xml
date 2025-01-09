@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <!-- ScrollView с отступом сверху -->
+    <ScrollView
+        android:id="@+id/my_scroll_fields"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingTop="150dp"
+        android:paddingBottom="8dp"
+        android:clipToPadding="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/register_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Имя пользователя -->
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="16dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black" />
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/email_register"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="16dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black" />
+
+            <!-- Номер телефона -->
+            <EditText
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:digits="0123456789-() "
+                android:layout_marginBottom="16dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black" />
+
+            <!-- Специальный код -->
+            <EditText
+                android:id="@+id/special_code"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:hint="Special Code"
+                android:inputType="text"
+                android:layout_marginBottom="16dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black" />
+
+            <!-- Пароль -->
+            <EditText
+                android:id="@+id/password_register"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:layout_marginBottom="16dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black" />
+
+            <!-- Подтверждение пароля -->
+            <EditText
+                android:id="@+id/confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:layout_marginBottom="16dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Кнопка регистрации -->
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="36dp"
+    android:backgroundTint="@color/teal_200"
+    android:text="Register"
+    android:textColor="@android:color/white"
+    android:textSize="16sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

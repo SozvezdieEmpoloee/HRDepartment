@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/add_vacancy_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_add_vacancy_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Vacancy"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/et_vacancy_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Vacancy Title"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/et_vacancy_salary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:hint="Salary (e.g., $5000)"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/et_vacancy_experience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:hint="Experience (e.g., 2-5 years)"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/et_vacancy_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            android:minLines="4"
+            android:gravity="top"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btn_save_new_vacancy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Vacancy"
+            android:backgroundTint="@color/teal_200"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+</ScrollView>

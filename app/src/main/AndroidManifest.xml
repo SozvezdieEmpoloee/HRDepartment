@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Base.Theme.HRDepartment">
+
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".VacancyActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".ui.fragment.ProfileFragment" />
+        <activity android:name=".ui.fragment.EmployeesFragment" />
+        <activity android:name=".ui.fragment.VacanciesFragment" />
+        <activity android:name=".data.models.UserDto" />
+        <activity android:name=".data.models.VacancyDto" />
+        <activity android:name=".data.models.EmployeeDto" />
+        <activity android:name=".data.models.VacancyApplicantDto" />
+        <activity android:name=".data.database.Converters" />
+        <activity android:name=".ui.vacancies.AddVacancyActivity" />
+        <activity android:name=".ui.vacancies.VacancyDetailsActivity" />
+        <activity android:name=".network.ApiService" />
+        <activity android:name=".network.ApiClient" />
+
+
+
+
+
+
+
+
+
+    </application>
+
+
+</manifest>
